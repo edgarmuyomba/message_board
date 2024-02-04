@@ -14,3 +14,7 @@ block content
               p(class="author") #{message.added}
             p(class="date")= message.user
     div(class="input")
+      form(method="POST", action="/new")
+        input(name="user", placeholder="Author", required=true, class="user")
+        input(name="text", placeholder="Message", required=true, class="text")
+        input(type="submit", value="Post", class="button")
